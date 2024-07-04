@@ -15,6 +15,11 @@ https://archive.kyoani.cn/
 # 抓取
 https://archive.kyoani.cn/create.html
 
+输入
+url 被抓取页面地址
+title 标题
+catcher 抓取人
+
 # 实际被抓取页面展示地址
 
 ## 原始地址
@@ -42,17 +47,19 @@ https://archive.kyoani.cn/:/kyotoanimation.co.jp/information--id=6005_2024070419
 # 翻译后的数据保存在
 https://archive.kyoani.cn/:/kyotoanimation.co.jp/information--id=6005_202407041948/_translation.jsonl
 
-## 格式为 tran 新翻译 disabled 屏蔽某条翻译
+## 格式为 tran 新翻译 disabled 屏蔽某条翻译 polish润色 每一条翻译都需要review之后才能生效
 [1234567890,'tran','翻译人1昵称','uuid1','原文1','译文1','zh_CN']
 [1234567890,'tran','翻译人1昵称','uuid2','原文2','译文2','zh_HK']
 [1234567890,'tran','翻译人1昵称','uuid3','原文2','译文2','en']
 [1234567890,'disabled','操作人昵称','uuid2']
+[1234567890,'polish','润色人昵称','uuid7','润色之后的文字','uuid3']
+[1234567890,'review','审核人','uuid2']
+[1234567890,'review','审核人','uuid7'] #润色通过审核也当成译文按顺序展示最终的
 
 
 # 页面评论
 https://archive.kyoani.cn/:/kyotoanimation.co.jp/information--id=6005_202407041948/_comments.jsonl
 
 [1234567890,'comment','昵称','uuid4','评论文字','父级id']
-
 
 ```
