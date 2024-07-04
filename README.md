@@ -51,11 +51,39 @@ https://archive.kyoani.cn/:/kyotoanimation.co.jp/information--id=6005_2024070419
 [1234567890,'tran','翻译人1昵称','uuid1','原文1','译文1','zh_CN']
 [1234567890,'tran','翻译人1昵称','uuid2','原文2','译文2','zh_HK']
 [1234567890,'tran','翻译人1昵称','uuid3','原文2','译文2','en']
-[1234567890,'disabled','操作人昵称','uuid2']
+[1234567890,'review','操作人昵称','uuid2','reject']
 [1234567890,'polish','润色人昵称','uuid7','润色之后的文字','uuid3']
-[1234567890,'review','审核人','uuid2']
+[1234567890,'review','审核人','uuid2','accept']
 [1234567890,'review','审核人','uuid7'] #润色通过审核也当成译文按顺序展示最终的
 
+## pending shield online
+{
+  unix:1234567890,
+  type:'tran',
+  id:'uuid1',
+  translator:'toto',
+  origin:'原文1',
+  text:'译文',
+  nice:'翻译人昵称',
+  lang:'zh_CN',
+  status: 'pending',
+}
+{
+  unix:1234567890,
+  type:'review',
+  status: 'accept'
+}
+{
+  id:'uuid7',
+  tranId:'uuid1',
+  nice:'润色人昵称',
+  status: 'pending',
+}
+{
+  unix:1234567890,
+  type:'review',
+  status: 'reject'
+}
 
 # 页面评论
 https://archive.kyoani.cn/:/kyotoanimation.co.jp/information--id=6005_202407041948/_comments.jsonl
