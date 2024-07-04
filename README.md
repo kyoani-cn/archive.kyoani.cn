@@ -82,6 +82,7 @@ https://archive.kyoani.cn/:/kyotoanimation.co.jp/information--id=6005_2024070419
 {
   unix:1234567890,
   type:'review',
+  nice:'润色人昵称',
   status: 'reject'
 }
 
